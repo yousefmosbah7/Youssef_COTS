@@ -1,0 +1,45 @@
+\doxysection{DIO\+\_\+interface.\+h}
+\hypertarget{_d_i_o__interface_8h_source}{}\label{_d_i_o__interface_8h_source}\mbox{\hyperlink{_d_i_o__interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DIO\_INTERFACE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DIO\_INTERFACE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ DIO\_u8PORTA\ \ \ \ \ \ \ \ \ 0u}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ DIO\_u8PORTB\ \ \ \ \ \ \ \ \ 1u}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DIO\_u8PORTC\ \ \ \ \ \ \ \ \ 2u}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ DIO\_u8PORTD\ \ \ \ \ \ \ \ \ 3u}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN0\ \ \ \ \ \ \ \ \ \ 0u}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN1\ \ \ \ \ \ \ \ \ \ 1u}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN2\ \ \ \ \ \ \ \ \ \ 2u}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN3\ \ \ \ \ \ \ \ \ \ 3u}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN4\ \ \ \ \ \ \ \ \ \ 4u}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN5\ \ \ \ \ \ \ \ \ \ 5u}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN6\ \ \ \ \ \ \ \ \ \ 6u}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN7\ \ \ \ \ \ \ \ \ \ 7u}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN\_INPUT\ \ \ \ \ 0u}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN\_OUTPUT\ \ \ \ 1u}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN\_LOW\ \ \ \ \ \ \ 0u}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ DIO\_u8PIN\_HIGH\ \ \ \ \ \ 1u}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ DIO\_u8PORT\_OUTPUT\ \ \ 0xff}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ DIO\_u8PORT\_INPUT\ \ \ \ 0u}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ DIO\_u8PORT\_HIGH\ \ \ 0xff}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ DIO\_u8PORT\_LOW\ \ \ \ 0x0}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ \mbox{\hyperlink{_d_i_o__interface_8h_a0c085e73f8ced873e838ec215685a648}{DIO\_u8SetPinDirection}}(\mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Port,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Pin,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Direction\ );}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ \mbox{\hyperlink{_d_i_o__interface_8h_a3e4ca6e59312b8c79846a1e5a797d232}{DIO\_u8SetPinValue}}(\mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Port,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Pin,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Value\ );}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ \mbox{\hyperlink{_d_i_o__interface_8h_a54d75bbc3cc17b7cd8409a3ff2cc7169}{DIO\_u8ReadPinValue}}(\mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Port,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Pin,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}*\ Copy\_pu8Value\ );}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ \mbox{\hyperlink{_d_i_o__interface_8h_a4091c6da73688b859dc732450d504765}{DIO\_u8SetPortDirection}}(\mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Port,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Direction\ );}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ \mbox{\hyperlink{_d_i_o__interface_8h_a53fc830a4e2a76faaea885ce69a14458}{DIO\_u8SetPortValue}}(\mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Port,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Value\ );}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ \mbox{\hyperlink{_d_i_o__interface_8h_aee361755a6a6a619126315b61f98a149}{DIO\_u8TogglePinValue}}(\mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Port,\ \mbox{\hyperlink{_s_t_d___t_y_p_e_s_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}\ Copy\_u8Pin\ );}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
