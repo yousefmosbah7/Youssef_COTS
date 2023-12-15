@@ -1,8 +1,6 @@
 #ifndef KPD_CFG_H
 #define KPD_CFG_H
 
-#define KPD_u8COL_NUM		4
-#define KPD_u8ROW_NUM		4
 
 #define KPD_u8ROW_PORT		DIO_u8PORTB
 #define KPD_u8ROW1_PIN		DIO_u8PIN4
