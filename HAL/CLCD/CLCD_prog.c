@@ -10,6 +10,11 @@
 #include "CLCD_cfg.h"
 
 #if CLCD_u8BIT_MODE == FOUR_BIT
+
+/**
+ *
+ * @param Copy_u8Data this parameter is used to pass the data we want to put on the half of the port
+ */
 static void voidSetHalfDataPort(uint8 Copy_u8Data)
 {
 	DIO_u8SetPinValue(CLCD_u8DATA_PORT,CLCD_u8D4_PIN, GET_BIT(Copy_u8Data,0));
@@ -19,6 +24,7 @@ static void voidSetHalfDataPort(uint8 Copy_u8Data)
 }
 #endif
 
+
 static void voidSendEnablePulse(void)
 {
 	DIO_u8SetPinValue(CLCD_u8CTRL_PORT,CLCD_u8E_PIN, DIO_u8PIN_HIGH);
@@ -26,6 +32,10 @@ static void voidSendEnablePulse(void)
 	DIO_u8SetPinValue(CLCD_u8CTRL_PORT,CLCD_u8E_PIN, DIO_u8PIN_LOW);
 }
 
+/**
+ *
+ * @param Copy_u8Cmd this parameter is used to pass the command to the LCD
+ */
 void CLCD_voidSendCmd(uint8 Copy_u8Cmd)
 {
 	/*Set RS pin to low for command*/
@@ -56,6 +66,10 @@ void CLCD_voidSendCmd(uint8 Copy_u8Cmd)
 
 }
 
+/**
+ *
+ * @param Copy_u8Data this parameter is used to pass the data to the LCD
+ */
 void CLCD_voidSendData(uint8 Copy_u8Data)
 {
 	/*Set RS pin to high for data*/
@@ -110,6 +124,11 @@ void CLCD_voidInit(void)
 
 }
 
+/**
+ *
+ * @param Copy_pchString this parameter is used to pass the string we want to print on the LCD
+ * @return Local_u8ErrorState return if there is an error or not
+ */
 uint8 CLCD_u8SendString(const char* Copy_pchString)
 {
 	uint8 Local_u8ErrorState = OK;
@@ -130,6 +149,10 @@ uint8 CLCD_u8SendString(const char* Copy_pchString)
 	return Local_u8ErrorState;
 }
 
+/**
+ *
+ * @param Copy_s32Number this parameter is used to pass the number we want to print on the LCD
+ */
 void CLCD_voidSendNumber(sint32 Copy_s32Number)
 {
 	char Local_chNumber[10];
@@ -167,6 +190,12 @@ void CLCD_voidSendNumber(sint32 Copy_s32Number)
 
 }
 
+/**
+ *
+ * @param Copy_u8XPos this parameter is used to configure the X plane position on the LCD
+ * @param Copy_u8YPos this parameter is used to configure the Y plane position on the LCD
+ */
+
 void CLCD_voidGoToXY(uint8 Copy_u8XPos, uint8 Copy_u8YPos)
 {
 	uint8 Local_u8Address ;
@@ -187,6 +216,14 @@ void CLCD_voidGoToXY(uint8 Copy_u8XPos, uint8 Copy_u8YPos)
 	CLCD_voidSendCmd(Local_u8Address);
 }
 
+/**
+ *
+ * @param Copy_u8LocationNum this parameter is used to configure the location number of the CGRAM
+ * @param Copy_pu8Pattern this parameter is used to configure the pattern we want to print on LCD
+ * @param Copy_u8XPos this parameter is used to configure the X plane position on the LCD
+ * @param Copy_u8YPos this parameter is used to configure the Y plane position on the LCD
+ * @return Local_u8ErrorState return if there is an error or not
+ */
 uint8 CLCD_u8SendSpecialCharacter(uint8 Copy_u8LocationNum, uint8* Copy_pu8Pattern, uint8 Copy_u8XPos, uint8 Copy_u8YPos)
 {
 	uint8 Local_u8ErrorState = OK;

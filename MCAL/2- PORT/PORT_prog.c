@@ -5,6 +5,10 @@
 #include "PORT_interface.h"
 #include "PORT_reg.h"
 
+/**
+ * @brief This function is used to configure all pins directions and initial states 
+*/
+
 void PORT_voidInit(void)
 {
 	DDRA = PORTA_DIR;
