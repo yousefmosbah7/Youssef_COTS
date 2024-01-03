@@ -16,14 +16,14 @@
 #define DIO_u8PIN6 			6u
 #define DIO_u8PIN7 			7u
 
+#define DIO_u8PORT_OUTPUT	0xff
+#define DIO_u8PORT_INPUT	0u
+
 #define DIO_u8PIN_INPUT 	0u
 #define DIO_u8PIN_OUTPUT 	1u
 
 #define DIO_u8PIN_LOW		0u
 #define DIO_u8PIN_HIGH		1u
-
-#define DIO_u8PORT_OUTPUT	0xff
-#define DIO_u8PORT_INPUT	0u
 
 #define DIO_u8PORT_HIGH   0xff
 #define DIO_u8PORT_LOW    0x0
